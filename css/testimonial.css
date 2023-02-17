@@ -1,0 +1,63 @@
+/*__________________________Testimonials________________________*/
+
+.testimonial-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+}
+
+.testimonial {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+.testimonial .testi-image {
+  height: 170;
+  width: 170px;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonial .testi-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.testi-slide p {
+  padding: 0 100px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.testi-slide .quote-icon {
+  font-size: 30px;
+  color: var(--color-primary);
+}
+
+.testi-slide .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details .cliet-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+.details .cliet-job {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-body);
+}

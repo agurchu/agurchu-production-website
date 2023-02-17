@@ -1,0 +1,25 @@
+/*___________________________Media Scroll_________________________*/
+
+.page-header {
+  background: url(/Images/vice_&_T.jpg);
+  background-size: cover;
+
+  width: 100%;
+  height: auto;
+  z-index: 10000;
+}
+.box {
+  inline-size: min(100% - 4rem, 70rem);
+  margin-inline: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+.flow {
+  display: grid;
+}
+
+.title {
+  color: var(--color-heading);
+  font-size: 3rem;
+  margin-bottom: 0;
+}

@@ -1,0 +1,206 @@
+/*____________________________Navigation Bar_______________________________*/
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 10%;
+  transition: 0.6s;
+  box-shadow: var(--box-shadow);
+}
+
+header .logo {
+  width: 7rem;
+  position: relative;
+}
+
+header.sticky {
+  background: var(--color-Background);
+}
+
+header .navbar {
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  justify-content: space-between;
+  transition: 0.6s;
+}
+.nav__item a {
+  margin-left: 2rem;
+}
+
+.nav-link {
+  padding: 0.7rem 1rem;
+  font-weight: 500px;
+  transition: all 0.5s ease;
+}
+.nav-link:hover {
+  color: var(--color-primary);
+  background: var(--color-accent);
+  border-radius: 4rem;
+}
+.nav-link.active {
+  color: var(--color-primary);
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__opt ul,
+.hamburger {
+  display: none;
+}
+.nav__opt {
+  position: absolute;
+  display: block;
+}
+
+.nav__item--Opt a {
+  color: var(--color-selected);
+}
+.nav__item--Opt a:hover {
+  color: var(--color-Background);
+}
+
+.nav__item:hover .nav__opt ul li a {
+  border-radius: 0;
+}
+
+.nav__item:hover .nav__opt ul li a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 1200px) {
+  header {
+    padding: 2rem 5%;
+  }
+}
+@media (max-width: 991px) {
+  header {
+    padding: 2rem 2rem;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .nav-link:hover .nav__opt {
+    display: block;
+    position: absolute;
+    width: max-content;
+    padding-top: 2rem;
+    border-radius: 20px;
+    left: 10px;
+  }
+
+  .nav__item:hover .nav__opt ul {
+    background: var(--color-accent);
+    text-align: left;
+    position: relative;
+    margin-top: 2.5rem;
+    display: block;
+    padding: 0;
+    border-radius: 20px;
+  }
+
+  .nav__item:hover .nav__opt ul li {
+    border-bottom: 1px dotted var(--color-heading);
+    text-align: left;
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0;
+  }
+
+  .nav__item:hover .nav__opt ul li:last-child {
+    border-bottom: none;
+  }
+}
+@media screen and (max-width: 760px) {
+  .nav-link {
+    padding: 0.7rem 1rem;
+    font-weight: 500px;
+
+    transition: all 0.5s ease;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    background-color: var(--color-heading);
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+  }
+  /*.nav-menu.sticky {
+      position: absolute;
+    }*/
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: -4rem;
+    padding: 10rem 0;
+    transform: translateY(-400px);
+    flex-direction: column;
+    background-color: var(--color-Background);
+    width: 100%;
+    margin-bottom: 0;
+    height: 100%;
+    text-align: left;
+    z-index: -1;
+    align-items: start;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-menu.active {
+    right: 0;
+    top: 0;
+    transform: translateY(0);
+    padding-inline-start: 35%;
+  }
+
+  .nav__opt {
+    position: relative;
+  }
+  .nav__item--Opt {
+    width: 92%;
+    margin-left: 3.5rem;
+    margin-top: 1rem;
+  }
+  .nav__item--Opt::before {
+    content: "\2713"; /* Unicode character for a check mark */
+    margin-right: 10px;
+    position: absolute;
+    left: 3rem;
+    color: var(--color-heading);
+  }
+  .nav__opt ul {
+    display: block;
+  }
+  .nav__item {
+    margin-top: 2rem;
+    margin-right: 2rem;
+  }
+
+  .fa-chevron-down {
+    display: none;
+  }
+}
