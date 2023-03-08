@@ -428,9 +428,24 @@
         </p>
       </div>
       <div class="container">
-        <div class="box">
-          <img src="/Images/Agurchu_Title-background-5.jpg" />
-        </div>
+        <picture class="box">
+          <source
+            type="image/webp"
+            srcset="
+              slides/aw-photo-slide8@2x.webp 2x,
+              slides/aw-photo-slide8.webp    1x
+            "
+          />
+          <source
+            type="image/jpg"
+            srcset="
+              slides/aw-photo-slide8@2x.jpg 2x,
+              slides/aw-photo-slide8.jpg    1x
+            "
+          />
+          <img src="slides/aw-photo-slide8.jpg" />
+        </picture>
+
         <div class="box">
           <p>
             Agurchu Production was derived from the brand Agurchu for graphic
