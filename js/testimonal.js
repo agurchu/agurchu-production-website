@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   grabCursor: true,
   loop: true,
@@ -14,8 +14,8 @@ var swiper = new Swiper(".mySwiper", {
 
 ///photto slideshow
 
-var slideIndex = 1;
-var timer;
+let slideIndex = 1;
+let timer;
 
 showSlides(slideIndex);
 
@@ -24,12 +24,12 @@ function plusSlides(n) {
 }
 
 function playSlideshow() {
-  var playButton = document.querySelector(".play");
-  if (playButton.innerHTML === "&#9658;") {
+  let playButton = document.querySelector(".play");
+  if ((playButton.innerHTML = "&#9658;")) {
     playButton.innerHTML = "&#10074;&#10074;";
     timer = setInterval(function () {
       plusSlides(1);
-    }, 3000);
+    }, 2000);
   } else {
     playButton.innerHTML = "&#9658;";
     clearInterval(timer);
@@ -37,9 +37,9 @@ function playSlideshow() {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.querySelectorAll(".slideshow img");
-  var dots = document.querySelectorAll(".dot");
+  let i;
+  let slides = document.querySelectorAll(".slideshow img");
+  let dots = document.querySelectorAll(".dot");
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -50,8 +50,8 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace("active", "");
   }
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  dots[slideIndex - 1].className += "active";
 }
