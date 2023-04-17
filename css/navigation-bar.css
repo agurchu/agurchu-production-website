@@ -6,7 +6,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  padding: 2rem 10%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   transition: 0.6s;
   box-shadow: var(--box-shadow);
 }
@@ -72,17 +73,6 @@ header .navbar {
 
 .nav__item:hover .nav__opt ul li a:hover {
   color: var(--color-primary);
-}
-
-@media (max-width: 1200px) {
-  header {
-    padding: 2rem 5%;
-  }
-}
-@media (max-width: 991px) {
-  header {
-    padding: 2rem 2rem;
-  }
 }
 
 @media screen and (min-width: 760px) {

@@ -2,14 +2,25 @@
 
 .contact {
   position: relative;
-  min-height: 100vh;
-  background-image: url(../Images/God_s-window-dark.jpg);
-  background-position: center;
-  background-size: cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  background: url(../Images/God_s-window-dark.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.25;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .google-map {

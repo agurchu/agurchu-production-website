@@ -1,11 +1,15 @@
 :root {
   --color-primary: #ff0025;
   --color-secondary: #ffcccc;
-  --color-accent: rgb(42, 50, 63);
-  --color-Background: linear-gradient(
+  --color-accent: linear-gradient(
     to right,
-    rgb(83, 65, 65) 0%,
-    rgb(49, 33, 33) 100%
+    rgb(8, 10, 19) 0%,
+    rgb(63, 42, 42) 100%
+  );
+  --color-Background: linear-gradient(
+    230deg,
+    rgb(24, 20, 20) 0%,
+    rgb(8, 10, 19) 100%
   );
   --color-selected: #cc9999;
   --color-heading: #fff;
@@ -17,6 +21,16 @@
   --round-02: 15px;
   --round-03: 20px;
 }
+
+@import url(../css/about.css);
+@import url(../css/buttons.css);
+@import url(../css/contacts.css);
+@import url(../css/home.css);
+@import url(../css/navigation-bar.css);
+@import url(../css/opening-slideshow.css);
+@import url(../css/price-plan.css);
+@import url(../css/services.css);
+
 *,
 ::after,
 *::before {
@@ -78,29 +92,26 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-track {
   background-color: var(--color-Background);
 }
-section {
-  padding: 3rem 10%;
+.container-pw {
+  padding-right: 10%;
+  padding-left: 10%;
 }
-
-footer {
-  padding: 3rem 10%;
+.container-py {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 @media (max-width: 1200px) {
-  section {
-    padding: 3rem 5%;
-  }
-  footer {
-    padding: 3rem 5%;
+  .container-pw {
+    padding-right: 5%;
+    padding-left: 5%;
   }
 }
 
 @media (max-width: 968px) {
-  section {
-    padding: 3rem 3%;
-  }
-  footer {
-    padding: 3rem 3%;
+  .container-pw {
+    padding-right: 3%;
+    padding-left: 3%;
   }
 
   html {
@@ -118,18 +129,11 @@ body {
   font-family: Arial, sans-serif, Helvetica;
 
   background: var(--color-Background);
-  height: 100vh;
-  font-size: 2rem;
+  min-height: 100vh;
+
   line-height: 1.5;
 }
-.banner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: url(/Images/God_s-window.jpg);
-  background-size: cover;
-  opacity: 0.1;
-}
+
 h1,
 h2,
 h3,
@@ -241,9 +245,21 @@ a {
 /*____________________Footer________________*/
 
 footer {
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
   background: url(../Images/Agurchu_Title-background-4.jpg) no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -1;
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 footer .footer-box-container {
@@ -293,9 +309,20 @@ footer .credit span {
 
 .portfolio {
   position: relative;
+}
+
+.portfolio::before {
+  content: "";
+  position: absolute;
   background: url(../Images/Potoles-dark.jpg) no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -1;
+  opacity: 0.25;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .portfolio .container {
@@ -811,6 +838,7 @@ footer .credit span {
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
 .home-about .text::before {
@@ -819,6 +847,7 @@ footer .credit span {
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0.3;
   background: url(../Images/God_s-window-dark.jpg);
   background-position: center;
   background-size: cover;
