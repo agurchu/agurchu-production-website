@@ -1,8 +1,8 @@
 :root {
   --color-primary: #ff0025;
   --color-secondary: #ffcccc;
-  --color-accent: rgb(34, 23, 23);
-  --color-Background: rgb(32, 15, 15);
+  --color-accent: rgb(42, 50, 63);
+  --color-Background: rgb(51, 38, 38);
   --color-selected: #cc9999;
   --color-heading: #fff;
   --color-body: #ccc;
@@ -88,12 +88,12 @@ footer {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 968px) {
   section {
-    padding: 3rem 2rem;
+    padding: 3rem 3%;
   }
   footer {
-    padding: 3rem 2rem;
+    padding: 3rem 3%;
   }
 
   html {
