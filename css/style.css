@@ -2,13 +2,20 @@
   --color-primary: #ff0025;
   --color-secondary: #ffcccc;
   --color-accent: rgb(42, 50, 63);
-  --color-Background: rgb(51, 38, 38);
+  --color-Background: linear-gradient(
+    to right,
+    rgb(83, 65, 65) 0%,
+    rgb(49, 33, 33) 100%
+  );
   --color-selected: #cc9999;
   --color-heading: #fff;
   --color-body: #ccc;
   --light-bg: rgba(255, 255, 255, 0.7);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
+  --round-01: 8px;
+  --round-02: 15px;
+  --round-03: 20px;
 }
 *,
 ::after,

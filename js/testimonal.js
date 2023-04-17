@@ -1,3 +1,41 @@
+/* ====================== COntacts ============================= */
+
+const form = document.querySelector("form");
+const nameInput = document.querySelector('input[name="fullName"]');
+const emailInput = document.querySelector('input[name="email"]');
+const msgInput = document.querySelector('textarea[name="messageField"]');
+
+const validateInputs = () => {
+  nameInput.previousElementSibling.classList.remove("invalid__text");
+  emailInput.previousElementSibling.classList.remove("invalid__text");
+  msgInput.previousElementSibling.classList.remove("invalid__text");
+
+  if (!nameInput.value) {
+    nameInput.previousElementSibling.classList.add("invalid__text");
+  } else if (!emailInput.value) {
+    emailInput.previousElementSibling.classList.add("invalid__text");
+  } else if (!msgInput.value) {
+    msgInput.previousElementSibling.classList.add("invalid__text");
+  }
+};
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  validateInputs();
+});
+
+nameInput.addEventListener("input", () => {
+  validateInputs();
+});
+emailInput.addEventListener("input", () => {
+  validateInputs();
+});
+msgInput.addEventListener("input", () => {
+  validateInputs();
+});
+
+/**=============== ================================ */
+
 let swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   grabCursor: true,

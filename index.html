@@ -940,28 +940,33 @@
           </div>
         </div>
         <div class="contact__form">
-          <form action="">
+          <div id="error"></div>
+          <form action="/" method="GET">
             <h2>Send Message</h2>
             <div class="input__box">
-              <input type="text" name="" required="required" />
-              <span>Full Name</span>
+              <label for="name" class="invalid__text">Full Name</label>
+
+              <input type="text" id="name" name="fullName" required />
             </div>
             <div class="input__box">
-              <input type="text" name="" required="required" />
-              <span>Email</span>
+              <label for="email" class="invalid__text">Email</label>
+
+              <input type="email" id="email" name="email" required />
             </div>
             <div class="input__box">
+              <label for="message" class="invalid__text"
+                >Type Your Message...</label
+              >
               <textarea
-                name=""
-                id=""
+                required
+                name="messageField"
+                id="message"
                 cols="30"
                 rows="10"
-                required="required"
               ></textarea>
-              <span>Type Your Message...</span>
             </div>
             <div class="input__box">
-              <input type="submit" name="" value="Send" />
+              <input class="btn-primary" type="submit" name="" value="Send" />
             </div>
           </form>
         </div>
